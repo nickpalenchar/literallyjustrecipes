@@ -6,19 +6,14 @@ name = "pypi"
 [scripts]
  # Builds all recipes from data/recipes into markdown, then `hugo`s it into the static site.
 build = "python build.py"
-
 # builds (using `build` above) and uploads to s3 for deployment.
 deploy = "python deploy.py" 
-
 # promotes the current assets in staging to prod
 promote = "python promote.py"
-
 # pulls a recipe from the google form submission (v2)
 next-recipe = "python -m recibundler next-recipe"
-
 # creates thumbnail images from the original ones if they don't exist.
 thumbnail = "python create_thumbnails.py"
-
 # creates thumnails *overwritting ones that do exist*
 recreate-thumbnails = "python create_thumbnails.py -f"
 
@@ -30,6 +25,7 @@ google-api-python-client = "*"
 google-auth-httplib2 = "*"
 google-auth-oauthlib = "*"
 pillow = "*"
+openai = "*"
 
 [dev-packages]
 black = "*"
